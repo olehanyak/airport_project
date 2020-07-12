@@ -1,3 +1,7 @@
+## Airport Flight Schedule
+
+Click [here](https://airport-flight-schedule.netlify.app/) to view this project
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
