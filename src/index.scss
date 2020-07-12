@@ -1,0 +1,16 @@
+@import "./styles/airportBoard.scss";
+@import "./styles/flight.scss";
+@import "./styles/flightsSchedule.scss";
+@import "./styles/searchFlight.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  color: #2f2f2f;
+  background: #e7efec;
+}

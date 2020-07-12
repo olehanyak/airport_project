@@ -1,0 +1,15 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    background: #1eb7ee;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(37,40,41,.3);
+}
+
+.fa-plane {
+    font-size: 40px;
+    margin: 10px 50px;
+}
