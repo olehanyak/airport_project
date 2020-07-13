@@ -5,14 +5,18 @@ import { dateSelector } from "../redux/flight.selectors";
 import { useLocation, useHistory } from "react-router-dom";
 
 const SearchFlights = ({ date }) => {
-    const [inputValue, setInputValue] = useState("");
+    const [value, setValue] = useState("");
     const location = useLocation();
     const history = useHistory();
+
+    const onChange = event => {
+        setValue(event.target.value);
+      }
 
     const onSearch = (event) => {
         event.preventDefault();
         let dataQuery = {
-            search: inputValue,
+            search: value,
             date,
         };
 
@@ -23,7 +27,7 @@ const SearchFlights = ({ date }) => {
             dataQuery = {
                 ...dataQuery,
                 ...qs.parse(location.search, { ignoreQueryPrefix: true }),
-                search: inputValue,
+                search: value,
             };
             pathname = location.pathname + "?";
         }
@@ -39,9 +43,9 @@ const SearchFlights = ({ date }) => {
                 <input
                     className="search-block__input"
                     type="text"
+                    value={value}
+                    onChange={onChange}
                     placeholder="Airline, destination or flight #"
-                    value={inputValue}
-                    onChange={(event) => setInputValue(event.target.value)}
                 />
                 <button className="search-block__btn">Search</button>
             </form>
