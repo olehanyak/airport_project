@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { useLocation, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import qs from "qs";
 import { dateSelector } from "../redux/flight.selectors";
-import { useLocation, useHistory } from "react-router-dom";
 
 const SearchFlights = ({ date }) => {
     const [value, setValue] = useState("");
