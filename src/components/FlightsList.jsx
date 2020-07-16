@@ -47,15 +47,19 @@ const FlightsList = ({ departureList, arrivalList }) => {
       if (flightDirection === "arrivals") {
         flightData = {
           ...flightData,
-          localTime: flight.timeToStand,
           timeStatus: flight.timeLandFact,
+          localTime: flight.timeToStand,
         };
       }
       return <Flight key={flight.ID} {...flightData} />;
     });
   };
 
-  return <>{extractDataList(flightsList, status)}</>;
+  return (
+      <> 
+        {extractDataList(flightsList, status)}
+      </>
+  );
 };
 
 const mapState = (state) => {
